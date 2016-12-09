@@ -1,0 +1,16 @@
+<h1>Weather Info</h1>
+
+<%= form_tag '/forecasts', method : get do %>
+ <%= label_tag 
+
+
+
+
+<p><%= @temp %></p>
+  <%= @forecasts[0..4].each do |forecast| %>
+    <p><%= forecast["date"]%>
+    <%= forecast["day"] %>
+    <%= forecast["high"] %>
+    <%= forecast["low"] %>
+    <%= forecast["text"] %></p>
+ <% end %>
